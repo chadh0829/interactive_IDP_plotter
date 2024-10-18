@@ -62,8 +62,7 @@ class TrajectoryVisualizer:
             if self.ref is None:
                 self.ref = self.xyz[i].copy()
             conf = self.xyz[i].copy()
-            aligned, _ = KabschAlign(self.ref, conf)  # Assuming KabschAlign is defined in utils
-
+            aligned, _ = KabschAlign(self.ref, conf)  
             # self.ax2.plot(aligned[:, 0], aligned[:, 1], aligned[:, 2], color='b')
 
             # Create color gradient for each point
@@ -80,7 +79,7 @@ class TrajectoryVisualizer:
             self.ax2.scatter(aligned[:, 0][-1], aligned[:, 1][-1], aligned[:, 2][-1], color='r', s=50)
             self.ax2.scatter(aligned[:, 0].mean(), aligned[:, 1].mean(), aligned[:, 2].mean(), 
                              color='g', s=100, marker='*')
-            print(aligned.mean(axis=0))
+            break # break after plotting one conformation
         self.fig2.canvas.draw_idle()
 
     def _on_click(self, event):

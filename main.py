@@ -7,19 +7,19 @@ from visualizer import TrajectoryVisualizer
 #example
 dirs = {
     "adapted":{
-        "traj":'./adapted/production.fit.xtc',
-        "top" :'./adapted/nowater.gro',
+        "traj":'../../adapted/production.fit.xtc',
+        "top" :'../../adapted/nowater.gro',
         "atom" :'BB'
     },
     "martini":{
-        "traj":'./control/production.fit.xtc',
-        "top" :'./control/nowater.gro',
+        "traj":'../../control/production.fit.xtc',
+        "top" :'../../control/nowater.gro',
         "atom" :'BB'
 
     },
     "allatom":{
-        "traj":'../one-2N4R-PRR/all.fit.1ns.xtc',
-        "top" :'../one-2N4R-PRR/protein.pdb',
+        "traj":'../../one-2N4R-PRR/all.fit.1ns.xtc',
+        "top" :'../../one-2N4R-PRR/protein.pdb',
         "atom" :'CA'
     }
 }
